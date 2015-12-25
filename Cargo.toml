@@ -1,0 +1,8 @@
+[package]
+name = "float"
+version = "0.0.2"
+authors = ["Peter Jin <peterhaijin@gmail.com>"]
+
+[lib]
+name = "float"
+path = "src/lib.rs"
