@@ -1,5 +1,3 @@
-use std::num::{Zero, One};
-
 pub trait FloatStub: Sized {
   type Inner;
 
@@ -21,16 +19,14 @@ impl FloatStub for f16_stub {
   }
 }
 
-impl Zero for f16_stub {
+impl f16_stub {
   #[inline]
-  fn zero() -> f16_stub {
+  fn _zero() -> f16_stub {
     f16_stub(0)
   }
-}
 
-impl One for f16_stub {
   #[inline]
-  fn one() -> f16_stub {
+  fn _one() -> f16_stub {
     f16_stub::from_parts(false, 0, 0)
   }
 }
