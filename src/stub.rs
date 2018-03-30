@@ -1,11 +1,16 @@
+#[derive(Clone, Copy, Default, Debug)]
+#[repr(C, align(2))]
+pub struct f16_stub(pub u16);
+
+#[derive(Clone, Copy, Default, Debug)]
+#[repr(C, align(4))]
+pub struct f16x2_stub(pub u16, pub u16);
+
 pub trait FloatStub: Sized {
   type Inner;
 
   fn from_parts(negative: bool, exponent: Self::Inner, fraction: Self::Inner) -> Self;
 }
-
-#[derive(Clone, Copy, Default, Debug)]
-pub struct f16_stub(u16);
 
 impl FloatStub for f16_stub {
   type Inner = u16;

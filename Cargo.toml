@@ -1,6 +1,6 @@
 [package]
 name = "float"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Peter Jin <peterhaijin@gmail.com>"]
 description = "Lightweight wrappers around primitive floating point types."
 repository = "https://github.com/peterhj/libfloat"
